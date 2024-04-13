@@ -26,10 +26,5 @@
         ],
         "js": ["content.js"]
       }
-    ],
-    "browser_specific_settings": {
-      "gecko": {
-        "id": "kananinirav0@hotmail.com"
-      }
-    }
+    ]
   }
