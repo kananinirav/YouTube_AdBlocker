@@ -1,13 +1,15 @@
 (function()
  {
-    // Enable The Undetected Adblocker
-    const adblocker = true;
+
+    chrome.storage.sync.get(['extensionEnabled'], function (result) {
+        if (result.extensionEnabled) removeAds();
+      });
 
     // Enable The Popup remover (pointless if you have the Undetected Adblocker)
     const removePopup = false;
 
     // Checks for updates (Removes the popup)
-    const updateCheck = true;
+    const updateCheck = false;
 
     // Enable debug messages into the console
     const debugMessages = true;
@@ -34,7 +36,7 @@
     //Set everything up here
     log("Script started");
 
-    if (adblocker) removeAds();
+    // if (adblocker) removeAds();
     if (removePopup) popupRemover();
 
     // Remove Them pesski popups
