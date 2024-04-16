@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
   <title>YouTube AdBlocker</title>
 </head>
 <body>
@@ -11,6 +12,22 @@
     <img src="icon.png" alt="Extension Icon" class="extension-icon" >
     <h2>YouTube AdBlocker</h2>
     <p>Block annoying ads on YouTube and enjoy an uninterrupted viewing experience.</p>
+    <div class="options">
+      <h2>Options:</h2>
+      <ul>
+        <li>
+          <div class="enable-box">
+            <span>Enable AdBlock</span>
+            <label class="switch">
+              <input id="enableExtension" type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>  
+        </li>
+        <li>
+          <button class="btnReloadPage" id="reloadPage">Reload Page</button>
+        </li>
+      </ul>
     <div class="features">
       <h2>Key Features:</h2>
       <ul>

@@ -4,7 +4,7 @@
     "version": "2.1",
     "description": "Removes Ads on YouTube",
     "permissions": [
-      "activeTab"
+      "activeTab", "storage"
     ],
     "action": {
       "default_icon": "icon.png",
