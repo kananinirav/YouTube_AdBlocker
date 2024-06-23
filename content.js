@@ -8,6 +8,9 @@
   // Checks for updates (Removes the popup)
   const updateCheck = true;
 
+  // Enable chapters section skipping (not enabled by default)
+  const skipChaptersSection = false;
+
   // Enable debug messages into the console
   const debugMessages = true;
 
@@ -25,16 +28,17 @@
   // Used for if there is ad found
   let isAdFound = false;
 
-  //used to see how meny times we have loopped with a ad active
+  // used to see how meny times we have loopped with a ad active
   let adLoop = 0;
 
   let hasIgnoredUpdate = false;
 
-  //Set everything up here
+  // Set everything up here
   log("Script started");
 
   if (adblocker) removeAds();
   if (removePopup) popupRemover();
+  if (skipChaptersSection) skippingChaptersSection();
 
   // Remove Them pesski popups
   function popupRemover() {
@@ -237,6 +241,10 @@
 
     document.head.appendChild(style);
 
+    log("Removed page ads (✔️)");
+  }
+
+  function skippingChaptersSection() {
     sponsor?.forEach((element) => {
       if (element.getAttribute("id") === "rendering-content") {
         element.childNodes?.forEach((childElement) => {
@@ -251,8 +259,6 @@
         });
       }
     });
-
-    log("Removed page ads (✔️)");
   }
 
   // Used for debug messages
