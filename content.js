@@ -127,7 +127,7 @@
           "body > ytd-app > ytd-popup-container > tp-yt-paper-dialog"
         );
         if (popupContainer)
-          if (popupContainer.style.display == "")
+          if (popupContainer.style.display === "")
             // popupContainer persists, lets not spam
             popupContainer.style.display = "none";
 
@@ -184,7 +184,7 @@
           // fixes if you set the speed to 2x and an ad plays, it sets it back to the default 1x
 
           //somthing bugged out default to 1x then
-          if (videoPlayback == 10) videoPlayback = 1;
+          if (videoPlayback === 10) videoPlayback = 1;
           if (video && isFinite(videoPlayback))
             video.playbackRate = videoPlayback;
 
